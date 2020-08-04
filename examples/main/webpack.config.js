@@ -1,8 +1,20 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { name } = require('./package');
+/*
+ * @Author: wuxh
+ * @Date: 2020-08-03 18:20:06
+ * @LastEditTime: 2020-08-04 10:12:47
+ * @LastEditors: wuxh
+ * @Description:
+ * @FilePath: /qiankun/examples/main/webpack.config.js
+ */
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { name } = require('./package')
 
 module.exports = {
   entry: process.env.MODE === 'multiple' ? './multiple.js' : './index.js',
+  output: {
+    path: __dirname + '/common', // 打包后的文件存放的地方
+    filename: 'index.js', // 打包后输出文件的文件名
+  },
   devtool: 'source-map',
   devServer: {
     port: '7099',
@@ -15,7 +27,8 @@ module.exports = {
     historyApiFallback: true,
     overlay: { warnings: false, errors: true },
   },
-  mode: 'development',
+  // mode: 'development',
+  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -48,4 +61,4 @@ module.exports = {
       },
     }),
   ],
-};
+}

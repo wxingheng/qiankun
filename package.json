@@ -25,8 +25,6 @@
     "start:react15": "cd examples/react15 && yarn start",
     "install:vue": "cd examples/vue && yarn",
     "start:vue": "cd examples/vue && yarn start",
-    "install:angular9": "cd examples/angular9 && yarn",
-    "start:angular9": "cd examples/angular9 && yarn serve:qiankun",
     "install:purehtml": "cd examples/purehtml && yarn",
     "start:purehtml": "cd examples/purehtml && yarn start",
     "build": "father-build",
@@ -61,6 +59,7 @@
     "@babel/runtime": "^7.10.5",
     "import-html-entry": "^1.7.0",
     "lodash": "^4.17.11",
+    "qiankun": "^2.0.16",
     "single-spa": "^5.3.1",
     "tslib": "^1.10.0"
   },
@@ -73,7 +72,6 @@
     "check-prettier": "^1.0.3",
     "dumi": "^1.0.24",
     "father-build": "^1.7.0",
-    "husky": "^2.3.0",
     "jest": "^25.2.2",
     "lint-staged": "^9.4.2",
     "np": "^5.0.3",
@@ -82,22 +80,6 @@
     "rimraf": "^3.0.0",
     "ts-jest": "^25.2.1",
     "typescript": "^3.4.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
-    }
-  },
-  "lint-staged": {
-    "**/*.{js,ts,json,css,md}": [
-      "yarn prettier",
-      "git add"
-    ],
-    "**/*.{js,ts}": [
-      "yarn lint:fix",
-      "git add"
-    ]
   },
   "jest": {
     "moduleFileExtensions": [

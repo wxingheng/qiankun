@@ -2,7 +2,7 @@ import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start, ini
 import './index.less';
 
 // for angular subapp
-import 'zone.js';
+// import 'zone.js';
 
 /**
  * 主应用 **可以使用任意技术栈**
@@ -26,32 +26,32 @@ registerMicroApps(
   [
     {
       name: 'react16',
-      entry: '//localhost:7100',
+      entry: '//localhost:3002',
       container: '#subapp-viewport',
       loader,
       activeRule: '/react16',
     },
-    {
-      name: 'react15',
-      entry: '//localhost:7102',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/react15',
-    },
+    // {
+    //   name: 'react15',
+    //   entry: '//localhost:7102',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/react15',
+    // },
     {
       name: 'vue',
-      entry: '//localhost:7101',
+      entry: '//localhost:3003',
       container: '#subapp-viewport',
       loader,
       activeRule: '/vue',
     },
-    {
-      name: 'angular9',
-      entry: '//localhost:7103',
-      container: '#subapp-viewport',
-      loader,
-      activeRule: '/angular9',
-    },
+    // {
+    //   name: 'angular9',
+    //   entry: '//localhost:7103',
+    //   container: '#subapp-viewport',
+    //   loader,
+    //   activeRule: '/angular9',
+    // },
     {
       name: 'purehtml',
       entry: '//localhost:7104',
