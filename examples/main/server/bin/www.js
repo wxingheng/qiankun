@@ -1,10 +1,10 @@
 /*
  * @Author: wuxh
  * @Date: 2020-08-04 10:30:23
- * @LastEditTime: 2020-08-04 10:39:11
+ * @LastEditTime: 2020-08-11 16:02:03
  * @LastEditors: wuxh
  * @Description:
- * @FilePath: /qiankun/examples/react16/server/bin/www
+ * @FilePath: /qiankun/examples/main/server/bin/www.js
  */
 
 /**
@@ -19,7 +19,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3002');
+var port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
 /**
@@ -95,3 +95,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+console.log('port:', port)

@@ -1,10 +1,10 @@
 /*
  * @Author: wuxh
  * @Date: 2020-08-04 10:30:23
- * @LastEditTime: 2020-08-04 10:31:54
+ * @LastEditTime: 2020-08-11 16:05:35
  * @LastEditors: wuxh
  * @Description:
- * @FilePath: /qiankun/examples/server/bin/www
+ * @FilePath: /qiankun/examples/vue/server/bin/www.js
  */
 
 /**
@@ -19,7 +19,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
+var port = normalizePort(process.env.PORT || '3003');
 app.set('port', port);
 
 /**
@@ -95,3 +95,5 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+console.log('port:', port)
